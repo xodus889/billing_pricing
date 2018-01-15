@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {{ message }}
+    <h3>AmazonEC2<button id="AmazonEC2" type="button">run</button></h3>
+    <h3>AmazonS3<button id="AmazonS3" type="button">run</button></h3>
+    <h3>AmazonRDS<button id="AmazonRDS" type="button">run</button></h3>
+    <h3>AmazonRoute53<button id="AmazonRoute53" type="button">run</button></h3>
+    <h3>AWSLambda<button id="AWSLambda" type="button">run</button></h3>
+    <h3>AmazonApiGateway<button id="AmazonApiGateway" type="button">run</button></h3>
+    <h3>AmazonCloudFront<button id="AmazonCloudFront" type="button">run</button></h3>
+    <h3>AmazonCloudSearch<button id="AmazonCloudSearch" type="button">run</button></h3>
+    <h3>AmazonCloudWatch<button id="AmazonCloudWatch" type="button">run</button></h3>
+    <h3>AmazonDynamoDB<button id="AmazonDynamoDB" type="button">run</button></h3>
+</body>
+
+<script>
+
+    document.getElementById("AmazonEC2").onclick = function() {
+        myFunction();
+    };
+
+    function myFunction() {
+
+        fetch("/test")
+        .then(function() {
+        console.log("ok");
+        }).catch(function() {
+        console.log("error");
+        });
+    }
+
+
+
+</script>
+</html>
